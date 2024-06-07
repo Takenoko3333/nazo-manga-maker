@@ -7,7 +7,7 @@
 
 # 概要
 
-このプログラムは、指定したフォルダ内の画像ファイルからランダムに画像を選び、グリッド状の画像を作成します。出力画像の数、名前、フォーマット、品質、クロップ方式、グリッドサイズなどを設定できます。
+このプログラムは、指定したフォルダ内の画像ファイルからランダムに画像を選び、グリッド状の漫画風画像を作成します。出力画像の数、名前、フォーマット、品質、クロップ方式、グリッドサイズなどを設定できます。
 <br><br>
 
 # 遊び方
@@ -156,8 +156,7 @@ Released under the [MIT License](https://opensource.org/licenses/mit-license.php
 
 # Overview
 
-This program randomly selects images from a specified folder and creates a grid of images. You can configure the number of output images, their names, formats, quality, crop type, and grid type.
-
+This program randomly selects images from a specified folder and creates a grid-style comic image. You can configure the number of output images, their names, formats, quality, crop type, and grid type.
 <br><br>
 
 # How to Play
