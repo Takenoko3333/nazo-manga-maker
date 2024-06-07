@@ -13,7 +13,7 @@ output_name = 'output'
 output_format = 'jpg'  # Supported formats: 'png', 'jpg', 'jpeg', 'webp', 'bmp', 'gif'
 quality = 85  # Applies to jpg (jpeg) or webp
 crop_type = 'top-left'  # Supported crop types: 'none', 'center', 'top-left', 'bottom-right', 'random'
-grid_type = '2x4'  # Supported grid types: '1x4', '2x2', '2x3', '2x4'
+grid_type = '2x3'  # Supported grid types: '1x4', '2x2', '2x3', '2x4'
 # --- config end ---
 
 def get_image_files(folder_path):
@@ -83,7 +83,14 @@ def create_image_grid(image_files, grid_size=(2, 3), output_size=(1024, 1536), o
         images.append(Image.new('RGB', cell_size, (255, 255, 255)))
 
     # Resize images to fit into the grid cells
-    resized_images = [img.resize(cell_size, Image.ANTIALIAS) for img in images]
+    try:
+        if hasattr(Image, 'Resampling'):
+            resized_images = [img.resize(cell_size, Image.Resampling.LANCZOS) for img in images]
+        else:
+            resized_images = [img.resize(cell_size, Image.LANCZOS) for img in images]
+    except AttributeError:
+        print("Warning: LANCZOS filter not available. Falling back to BILINEAR filter.")
+        resized_images = [img.resize(cell_size, Image.BILINEAR) for img in images]
 
     # Create a new blank image with the specified output size
     grid_image = Image.new('RGB', output_size)
