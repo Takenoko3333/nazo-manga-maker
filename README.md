@@ -9,6 +9,7 @@
 
 このプログラムは、指定したフォルダ内の画像ファイルからランダムに画像を選び、グリッド状の漫画風画像を作成します。出力画像の数、名前、フォーマット、品質、クロップ方式、グリッドサイズなどを設定できます。
 <br><br>
+
 <div align="center">
 <img src="/sample/20240607-202636-output-00003.jpg" height="300" />
 <img src="/sample/20240607-202551-output-00002.jpg" height="300" />
@@ -146,6 +147,12 @@ grid_type = '2x3'
 
 # 変更履歴
 
+## [0.1.1] - 2024-06-07
+
+### 修正
+
+- リサンプリングフィルタ及びグリッドタイプ初期値を修正
+
 ## [0.1.0] - 2024-06-07
 
 ### 追加
@@ -165,6 +172,7 @@ Released under the [MIT License](https://opensource.org/licenses/mit-license.php
 
 This program randomly selects images from a specified folder and creates a grid-style comic image. You can configure the number of output images, their names, formats, quality, crop type, and grid type.
 <br><br>
+
 <div align="center">
 <img src="/sample/20240607-202636-output-00003.jpg" height="300" />
 <img src="/sample/20240607-202551-output-00002.jpg" height="300" />
@@ -308,6 +316,12 @@ You can set the vertical and horizontal arrangement of the images. The default v
 <br><br>
 
 # Change Log
+
+## [0.1.1] - 2024-06-07
+
+### Fixed
+
+- Fixed resampling filter and default grid_type
 
 ## [0.1.0] - 2024-06-07
 
